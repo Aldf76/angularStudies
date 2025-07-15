@@ -1,0 +1,16 @@
+<input type="number"[(ngModel)]="idDigitado" placeholder="Digite o ID do personagem">
+<button (click)="buscarUsuarios()">Buscar usuário</button>
+
+<div *ngIf="users">
+<h2>{{users.name}}</h2>
+<p>Altura: {{users.height}}</p>
+<p>Gênero: {{users.gender}}</p>
+
+<h3>Filmes:</h3>
+<ul>
+    <li *ngFor="let film of films">
+        {{film}}
+    </li>
+</ul>
+
+</div>

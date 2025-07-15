@@ -1,0 +1,9 @@
+<button (click)="buscarUsuarios()">Buscar usuários</button> 
+
+<div>
+<ul *ngFor="let user of users">
+<li>
+    {{user.name}}
+</li>
+</ul>
+</div>

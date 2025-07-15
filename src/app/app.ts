@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { MessageService } from './message-service/message-service';
 
 @Component({
   selector: 'app-root',
@@ -7,5 +8,9 @@ import { Component } from '@angular/core';
   styleUrl: './app.css'
 })
 export class App {
-  protected title = 'meu-novo-projeto';
+
+  constructor(public messageService: MessageService) {}
+  sendMessage() {
+    this.messageService.add('Nova mensagem em ' + new Date());
+}
 }

@@ -1,0 +1,78 @@
+<div>Olá, hoje é dia {{ currentYear }}</div>
+
+<ul>
+  <li>
+    <app-contact></app-contact>
+  </li>
+  <li>
+    <app-about></app-about>
+  </li>
+</ul>
+
+<button (click)="cadastrar()">Cadastre-se</button>
+
+<div *ngIf="isLogged">
+  <label for="">Email</label>
+  <input type="email" name="email" id="" />
+  <label for="">Password</label>
+  <input type="password" name="password" id="" />
+</div>
+
+<br>
+
+<ul>
+  <li  *ngFor="let item of frutas">{{frutas}}</li>
+</ul>
+
+<br>
+
+
+<h2>Product List</h2>
+<ul>
+  <li *ngFor="let product of products">{{ product.name }} - ${{ product.price }}</li>
+</ul>
+
+<p *ngIf="products.length === 0">No products available.</p>
+
+
+
+
+<h3>Calculadora</h3>
+
+<input type="number" (input)="atualizarValor1($event)" placeholder="Valor 1">
+<input type="number" (input)="atualizarValor2($event)" placeholder="Valor 2">
+
+<div>
+  <button (click)="somar()">+</button>
+  <button (click)="subtrair()">-</button>
+  <button (click)="dividir()">/</button>
+  <button (click)="multiplicar()">*</button>
+</div>
+
+<p>
+  Resposta :   {{ resposta }}
+</p>
+
+
+<br>
+
+<p [ngClass]="{ 'active': isActive, 'inactive': !isActive }">
+  This paragraph's class changes dynamically.
+</p>
+
+<br> 
+<p *ngIf="temPermissao; else semPermissao">
+  Acesso concedido.
+</p>
+<ng-template #semPermissao>
+  <p>Acesso negado.</p>
+</ng-template>
+
+<br>
+
+<p>{{ teste | reverse}}</p>
+
+<p>///////////////////////////////////////////////////////</p>
+
+<button (click)="sendMessage()"> Enviar Mensagem</button>
+<div *ngFor="let msg of messageService.messages">{{ msg }}</div>
