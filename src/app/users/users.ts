@@ -32,3 +32,27 @@ export class Users {
       });
   }
 }
+
+/*
+
+buscarUsuarios() {
+  this.starwarsService.getUsers().subscribe((usuarios: any) => {
+    this.users = usuarios.results || [];
+    this.users = usuarios.results.forEach((user: any) => {
+      user.filmTitles = [];
+    });
+  });
+
+  // this.users.forEach((user: any) => {
+  //   user.filmTitles = [];
+  //   if (user.films) {
+  //     user.films.forEach((filmUrl: string) => {
+  //       this.starwarsService.getFilm(filmUrl).subscribe((film: any) => {
+  //         user.filmTitles.push(film.title);
+  //       });
+  //     });
+  //   }
+  // });
+}
+
+*/
