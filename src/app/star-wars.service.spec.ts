@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { StarWarsService } from './star-wars.service';
+import { starWarsService } from './star-wars.service';
 
 describe('StarWarsService', () => {
-  let component: StarWarsService;
-  let fixture: ComponentFixture<StarWarsService>;
+  let component: starWarsService;
+  let fixture: ComponentFixture<starWarsService>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [StarWarsService]
+      declarations: [starWarsService]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(StarWarsService);
+    fixture = TestBed.createComponent(starWarsService);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
