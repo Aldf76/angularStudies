@@ -9,6 +9,8 @@ import { ReversePipe } from './pipes/pipes';
 import { HttpClientModule } from '@angular/common/http';
 import { Users } from './users/users'; // 3 - passo
 import { FormsModule } from '@angular/forms';
+import { Table } from './components/table/table';
+import { MatTableModule } from '@angular/material/table';
 
 
 @NgModule({
@@ -18,13 +20,15 @@ import { FormsModule } from '@angular/forms';
     About,
     Contact,
     Users,
+    Table,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule, 
     ReversePipe,
     HttpClientModule,
-    FormsModule //É preciso importar para utilizar o ngModule users.html
+    FormsModule, //É preciso importar para utilizar o ngModule users.html
+    MatTableModule
   ],
   providers: [
     provideBrowserGlobalErrorListeners()
