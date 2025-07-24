@@ -1,0 +1,29 @@
+<div>
+Olá, {{nome}}
+<br>
+<button (click)="enviarMensagem()">Enviar Mensagem</button>
+</div>
+<br>
+<br>
+<br>
+<div>
+<button (click)="adicionarProduto()">Adicionar</button>
+<br>
+<br>
+<br>
+<br>
+
+<form (submit)="formEnviado.emit(formulario.value)" #formulario="ngForm">
+
+    <input type="text" name="nome" ngModel placeholder="Nome" required />
+    <input type="email" name="email" ngModel placeholder="Email" required />
+    <button type="submit">Enviar</button>
+
+</form>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+</div>
