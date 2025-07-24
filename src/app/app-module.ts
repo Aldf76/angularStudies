@@ -11,6 +11,8 @@ import { Users } from './users/users'; // 3 - passo
 import { FormsModule } from '@angular/forms';
 import { Table } from './components/table/table';
 import { MatTableModule } from '@angular/material/table';
+import { Pai } from './pai/pai';
+import { Filho } from './filho/filho';
 
 
 @NgModule({
@@ -21,6 +23,8 @@ import { MatTableModule } from '@angular/material/table';
     Contact,
     Users,
     Table,
+    Pai,
+    Filho,
   ],
   imports: [
     BrowserModule,
