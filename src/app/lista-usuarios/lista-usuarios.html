@@ -1,0 +1,10 @@
+<h2>Lista de Usuários</h2>
+<ul>
+    <li *ngFor="let usuario of usuarios">
+        {{usuario.name}} | <app-usuario-detalhes [id]="usuario.id"></app-usuario-detalhes>
+<!--<a [routerLink]="['/usuarios', usuario.id]" > Checar ID </a>  Comando para mostrar no console-->
+    </li>
+    <button (click)="buscarUsuarios()">Buscar</button>
+</ul>
+<br>
+<br>
