@@ -1,0 +1,21 @@
+<form [formGroup]="loginForm" (ngSubmit)="enviar()">
+    <input type="email" formControlName="email" placeholder="E-mail" />
+    <input type="password" formControlName="senha" placeholder="Senha" />
+    <button type="submit">Entrar</button>
+  </form>
+  
+  <p *ngIf="loginForm.get('email')?.invalid">
+    E-mail inválido
+  </p>
+  <!--
+    <p *ngIf="loginForm.get('senha')?.invalid">
+    Sua senha deve ter entre 8 e 16 caracteres
+  </p>
+  -->
+
+  <p *ngIf="loginForm.get('senha')?.errors?.['maxlength']">
+    A senha deve ter no máximo 16 caracteres.
+  </p>
+  <p *ngIf="loginForm.get('senha')?.errors?.['minlength']">
+    A senha deve ter no mínimo 8 caracteres.
+  </p>

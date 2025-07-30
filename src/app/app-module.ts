@@ -15,6 +15,10 @@ import { Pai } from './components/pai/pai';
 import { Filho } from './components/filho/filho';
 import { ListaUsuarios } from './lista-usuarios/lista-usuarios';
 import { UsuarioDetalhes } from './usuario-detalhes/usuario-detalhes';
+import { TemplateDriven } from './template-driven/template-driven';
+import { ReactiveForms } from './reactive-forms/reactive-forms';
+import { ReactiveFormsModule } from '@angular/forms';
+
 
 
 @NgModule({
@@ -29,6 +33,8 @@ import { UsuarioDetalhes } from './usuario-detalhes/usuario-detalhes';
     Filho,
     ListaUsuarios,
     UsuarioDetalhes,
+    TemplateDriven,
+    ReactiveForms,
   ],
   imports: [
     BrowserModule,
@@ -36,7 +42,8 @@ import { UsuarioDetalhes } from './usuario-detalhes/usuario-detalhes';
     ReversePipe,
     HttpClientModule,
     FormsModule, //É preciso importar para utilizar o ngModule users.html
-    MatTableModule
+    MatTableModule,
+    ReactiveFormsModule
   ],
   providers: [
     provideBrowserGlobalErrorListeners()
