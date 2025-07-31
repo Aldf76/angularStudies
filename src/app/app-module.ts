@@ -18,6 +18,7 @@ import { UsuarioDetalhes } from './usuario-detalhes/usuario-detalhes';
 import { TemplateDriven } from './template-driven/template-driven';
 import { ReactiveForms } from './reactive-forms/reactive-forms';
 import { ReactiveFormsModule } from '@angular/forms';
+import { CadastroFuncionario } from './components/cadastro-funcionario/cadastro-funcionario';
 
 
 
@@ -35,6 +36,7 @@ import { ReactiveFormsModule } from '@angular/forms';
     UsuarioDetalhes,
     TemplateDriven,
     ReactiveForms,
+    CadastroFuncionario,
   ],
   imports: [
     BrowserModule,
